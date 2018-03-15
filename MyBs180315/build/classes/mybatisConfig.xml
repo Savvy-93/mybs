@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 支配两个东西1.类的别名2.注册所有的SQL文 -->
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 1技能封装类的别名 -->
+	<typeAliases>
+		<!-- 实体别名 -->
+		<typeAlias type="com.grzcgl.sxy.entity.User" alias="User" />
+		<typeAlias type="com.grzcgl.sxy.entity.Expenditure" alias="Expenditure" />
+		<!-- alt +/ -->
+
+
+	</typeAliases>
+
+	<mappers>
+		<!--2注册映射文件 -->
+		<!-- SQL文的地址 -->
+		<mapper resource="com/grzcgl/sxy/SQLMapping/UserSQLMapper.xml" />
+		<mapper resource="com/grzcgl/sxy/SQLMapping/ExpenditureSQLMapper.xml" />
+		<!-- <mapper resource="com/grzcgl/sxy/SQLMapping/TableSQLMapper.xml" /> -->
+		<!-- 以后有新的类，此处在配置 -->
+	</mappers>
+
+
+</configuration>

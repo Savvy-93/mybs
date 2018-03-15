@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 1系统常量 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<!-- 开发模式=false -->
+	<constant name="struts.devMode" value="false" />
+	<!-- struts2 action实例化对象的转移权spring -->
+	<!-- 所有的class都是用spring中的id -->
+	<constant name="struts.objectFactory" value="spring" />
+
+	<package name="sys" namespace="/sys" extends="struts-default">
+
+	</package>
+
+	<!-- 3注册action子业务struts.xml -->
+	<!-- @跳转到注册的UserManagerAction.xml中 -->
+	<include file="com/grzcgl/sxy/actionMapping/UserManagerAction.xml" />
+	<include file="com/grzcgl/sxy/actionMapping/ExpenditureManagerAction.xml" />
+	<!-- <include file="com/grzcgl/sxy/actionMapping/TableManagerAction.xml" /> -->
+
+
+
+</struts>

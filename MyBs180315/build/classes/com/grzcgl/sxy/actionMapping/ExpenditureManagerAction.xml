@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- UserAction的映射文件 -->
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 命名空间 nameSpace="/user"双引号中命名空间前面要有/ -->
+	<!-- 继承的是struts.xml中的包名 extends="sys" -->
+	<package name="expenditure" namespace="/expenditure" extends="sys">
+		<!-- @这个class的名字是随便起的，最后要与application_action.xml中bean的id的名字相对应 -->
+		<action name="expenditureManagerAction" class="expenditureManagerAction">
+			<!-- 登陆成功，调转页面 -->
+			<result name="expendituresuccess" type="redirect">/index/Index.jsp
+			</result>
+			<!-- 登录失败，跳转页面 -->
+			<result name="expenditurefalse" type="redirect" >/UserLogin.jsp
+			</result>
+			
+
+		</action>
+
+
+	</package>
+</struts>

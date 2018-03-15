@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.grzcgl.sxy.dao.UserDao">
+	<select id="login" parameterType="User" resultType="user">
+		select
+		uid,username from user where username=#{username} and
+		userpassword=#{userpassword}
+	</select>
+
+	<!-- 统计表单 -->
+	<select id="table" parameterType="int" resultType="map">
+		select * from expenditure a,iotype b where a.userid=#{loginuid} and
+		a.expendituretype=b.typesign order by expendituretime
+	</select>
+
+</mapper>
